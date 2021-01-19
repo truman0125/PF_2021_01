@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portpolio - 1st</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/main.js"></script>
+
+    <script>
+    /*//////////////////////////////
+        함수명: showG
+        기능: gnbline박스를 높이값 변경하기
+    *///////////////////////////////
+    function showG(hv){// hv-높이값 전달변수
+        // 1. 함수호출 및 전달값 확인
+        console.log("나야나!"+hv);
+        // 2. 변경대상: .gnbline
+        var tg = document
+        .getElementsByClassName("gnbline").item(0);
+        //클래스요소는 반드시 순번을 쓴다(첫번째는 0번)
+        tg.style.height = hv+"px";
+        
+    }/////// showG 함수 ///////////
+    ////////////////////////////////
+    
+        
+    </script>
+    
+</head>
+
+
+
+
+
+<body>
+    <!--1.상단영역-->
+    <div class="top">
+        <div class="gnbline">
+            
+        </div>
+        <header id="top" class="inbox clb">
+            <h1 class="bld">롯데콘서트홀</h1>
+            <div class="col-2 t1">
+                <a href="http://www.lotteconcerthall.com/kor">
+                  <img src="images/img_logo01.png" alt="로고" class="logo">
+                </a>
+            </div>
+            <div class="col-10 t1">
+                 <nav class="tmenu">
+                    <ul>
+                        <li><a href="">로그인</a>
+                        </li>
+                       
+                        <li><a href="">회원가입</a>
+                        </li>
+                        
+                        <li><a href="">ENG</a>
+                        </li>
+                       
+                        <li><a href="">롯데문화재단</a></li>
+                       
+                        <li><a href="">롯데뮤지엄</a>
+                        </li>
+                        
+                        <li><a href="">롯데월드타워</a></li>
+                        
+                        <li class="search"><a href="">
+                            <img src="images/ico_search.png" alt="">
+                        검색</a></li>
+                        <!-- sns 아이콘 -->
+                       <li class="top_btn">
+                             <button><a href="http://www.lotteconcerthall.com/kor/ConcertHall/BrandStory" target="_blank">
+                                    <img src="images/btn_brandstory.gif" alt="브랜드스토리"></a></button>
+                            <button><a href="https://www.facebook.com/LOTTECONCERTHALL/" target="_blank">
+                                    <img src="images/btn_facebook.gif" alt="페이스북"></a></button>
+                            <button><a href="https://blog.naver.com/lotteconcerthall" target="_blank">
+                                    <img src="images/btn_blog.gif" alt="네이버블로그"></a></button>
+                            <button><a href="https://www.youtube.com/channel/UCCxcy7ryeUyT-hkKmPpPIkg" target="_blank">
+                                    <img src="images/btn_youtube.gif" alt="유튜브"></a></button>
+                            <button><a href="https://pf.kakao.com/_PMxohxl" target="_blank">
+                                    <img src="images/btn_kakaPlus.gif" alt="카카오플러스"></a></button>
+                        </li>
+                    </ul>
+                </nav>
+                <!--GNB(Global Navigation) 메뉴-->
+                <nav class="gnb clb" onmouseover="showG(294)" onmouseout="showG(0)" >
+                <dl>
+                    <dt><a href="">공연안내/예매</a></dt>
+                    <dd><a href="">공연 예매</a></dd>
+                    <dd><a href="">예매 안내</a></dd>
+                    <dd><a href="">패키지 예매</a></dd>
+                    <dd><a href="">예매확인/취소</a></dd>
+                    <dd><a href="">공연관람 예절</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">롯데콘서트홀</a></dt>
+                    <dd><a href="">공연장 소개</a></dd>
+                    <ul>
+                        <li>
+                            <dd><a href="">- 음향</a></dd>
+                        </li>
+                        <li>
+                            <dd><a href="">- 객석</a></dd>
+                        </li>
+                        <li>
+                            <dd><a href="">- 무대시설</a></dd>
+                        </li>
+                    </ul>
+                    <dd><a href="">BI소개</a></dd>
+                    <dd><a href="">브랜드 스토리</a></dd>
+                    <dd><a href="">공연장 둘러보기</a></dd>
+                    <dd><a href="">국제 오르간 콩쿠르</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">이용안내</a></dt>
+                    <dd><a href="">시설 안내</a></dd>
+                    <ul>
+                        <li>
+                            <dd><a href="">- 객석 안내</a></dd>
+                        </li>
+                        <li>
+                            <dd><a href="">- 편의시설 안내</a></dd>
+                        </li>
+                        <li>
+                            <dd><a href="">- 장애인 이용안내</a></dd>
+                        </li>
+                        <li>
+                            <dd><a href="">- 비상대피 안내</a></dd>
+                        </li>
+                    </ul>
+                    <dd><a href="">오시는 길</a></dd>
+                    <ul>
+                       <li>
+                             <dd><a href="">- 공연장 오시는 길</a></dd>
+                        </li>
+                    </ul>
+                </dl>
+                <dl>
+                    <dt><a href="">커뮤니티</a></dt>
+                    <dd><a href="">공지사항</a></dd>
+                   <ul>
+                        <li>
+                            <dd><a href="">- 공지</a></dd>
+                        </li>
+                        <li>
+                            <dd><a href="">- 이벤트</a></dd>
+                        </li>
+                        <li>
+                            <dd><a href="">- 앙코르곡</a></dd>
+                        </li>
+                        <li>
+                            <dd><a href="">- 대관</a></dd>
+                        </li>
+                    </ul>
+                    <dd><a href="">자주하는 질문</a></dd>
+                    <dd><a href="">Contact us</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">대관안내/신청</a></dt>
+                    <dd><a href="">대관절차 안내</a></dd>
+                    <dd><a href="">대관 사용료</a></dd>
+                    <dd><a href="">대관 시설안내</a></dd>
+                    <dd><a href="">대관규약</a></dd>
+                    <dd><a href="">BI사용규정</a></dd>
+                    <dd><a href="">대관공고</a></dd>
+                    <dd><a href="">대관신청</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="">마이페이지</a></dt>
+                    <dd><a href="">예매확인/취소</a></dd>
+                    <dd><a href="">1:1문의결과</a></dd>
+                    <dd><a href="">쿠폰/예매권</a></dd>
+                    <dd><a href="">나의 관심공연</a></dd>
+                    <dd><a href="">회원정보변경</a></dd>
+                    <dd><a href="">빈야드 회원가입</a></dd>
+                </dl>
+                </nav>
+            </div>
+        </header>
+    </div>
+    
+    <!--2.배너영역영역-->
+    <div class="ban">
+        <section id="ban" class="inbox clb">
+            <h2 class="bld">배너 세로/가로</h2>
+            <div class="col-5 b1">
+                <div class="big_ban">
+                 <!--슬라이드-->
+                <ul id="slide">
+                    <li><img src="images/big01_%EC%96%91%EC%A7%80%EC%98%81_444x618px.jpg" alt="slide"></li>
+                    <li><img src="images/big02_%EC%9E%84%EC%B0%BD%ED%98%B8-%EB%B0%94%EC%9D%B4%EC%98%AC%EB%A6%B0_444x618px.jpg" alt="slide"></li>
+                    <li><img src="images/big03%EC%A0%95%EB%AA%85%ED%9B%88%EC%9B%90%EC%BD%94%EB%A6%AC%EC%95%84_444x618px.jpg" alt="slide"></li>
+                    <li><img src="images/big04_Lotte_444x618px.jpg" alt="slide"></li>
+                    <li><img src="images/big05_%EC%8B%A0%EB%85%84%EC%9D%8C%EC%95%85%ED%9A%8C_%EC%A0%84%EB%8B%A8_%EC%95%9E(%EC%9C%A0).jpg" alt="slide"></li>
+                </ul> 
+            </div>
+                 
+            <div class="indic">
+            <!--블릿버튼-->
+            <ol class="cir_off">
+                <li class="on">
+                    <img src="images/btn_big_pause.png" alt="회색">
+                    <!--<img src="images/btn_big_play.png" alt="회색">-->
+                </li>
+                <li>
+                    <img src="images/bu_circle_off.png" alt="회색">
+                    <!--<img src="images/bu_circle_on.png" alt="빨강">-->
+                </li>
+                <li>
+                    <img src="images/bu_circle_off.png" alt="회색">
+                    <!--<img src="images/bu_circle_on.png" alt="빨강">-->
+                </li>
+                <li>
+                    <img src="images/bu_circle_off.png" alt="회색">
+                    <!--<img src="images/bu_circle_on.png" alt="빨강">-->
+                </li>
+                <li>
+                    <img src="images/bu_circle_off.png" alt="회색">
+                    <!--<img src="images/bu_circle_on.png" alt="빨강">-->
+                </li>
+                <li>
+                    <img src="images/bu_circle_off.png" alt="회색">
+                    <!--<img src="images/bu_circle_on.png" alt="빨강">-->
+                </li>
+            </ol>
+            <ul class="cir_on">
+                <li>
+                    <img src="images/bu_circle_on.png" alt="빨강">
+                </li>
+                <li>
+                    <img src="images/bu_circle_on.png" alt="빨강">
+                </li>
+                <li>
+                    <img src="images/bu_circle_on.png" alt="빨강">
+                </li>
+                <li>
+                    <img src="images/bu_circle_on.png" alt="빨강">
+                </li>
+                <li>
+                    <img src="images/bu_circle_on.png" alt="빨강">
+                </li>
+            </ul>
+                </div>    
+            </div>
+            <div class="col-7 b1">
+            <div class="all">
+                <img src="images/btn_open_all_menu.png" alt="">
+            </div>
+            <!--스몰 배너-->
+             <nav class="plist pli1">
+                 <ul>
+                     <li>
+                         <img src="images/small01.jpg">
+                         <!--오버레이 박스-->
+                         <ol class="movtxt">
+                             <li>정명훈<br>＆<br>원 코리아 오케스트라</li>
+                             <li></li>
+                             <li><img src="images/btn_over.png" alt=""></li>
+                         </ol>
+                     </li>
+                     <li>
+                         <img src="images/small02.jpg">
+                         <!--오버레이 박스-->
+                         <ol class="movtxt">
+                             <li>2021<br>NEW YEAR'S<br>CONCERT</li>
+                             <li></li>
+                             <li><img src="images/btn_over.png" alt=""></li>
+                         </ol>
+                     </li>
+                     <li>
+                         <img src="images/small03.jpg">
+                         <!--오버레이 박스-->
+                         <ol class="movtxt">
+                             <li>코리아챔버<br>오케스트라</li>
+                             <li></li>
+                             <li><img src="images/btn_over.png" alt=""></li>
+                         </ol>
+                     </li>
+                 </ul>
+             </nav>
+             <nav class="plist pli2">
+                 <ul>
+                     <li>
+                         <img src="images/small04.jpg">
+                         <!--오버레이 박스-->
+                         <ol class="movtxt">
+                             <li>올댓<br>라흐마니노프</li>
+                             <li></li>
+                             <li><img src="images/btn_over.png" alt=""></li>
+                         </ol>
+                     </li>
+                     <li>
+                         <img src="images/small05.jpg">
+                         <!--오버레이 박스-->
+                         <ol class="movtxt">
+                            <li>조나단 록스머스<br>Phantom콘서트</li>
+                             <li></li>
+                             <li><img src="images/btn_over.png" alt=""></li>
+                         </ol>
+                     </li>
+                     <li>
+                         <img src="images/small06.jpg">
+                         <!--오버레이 박스-->
+                         <ol class="movtxt">
+                             <li>에스메 콰르텟</li>
+                             <li></li>
+                             <li class="view"><img src="images/btn_over.png" alt=""></li>
+                         </ol>
+                     </li>
+                 </ul>
+             </nav>
+            </div>
+            <div class="col-4 b2"></div>
+            <div class="col-4 b2"></div>
+            <div class="col-4 b2"></div>
+        </section>
+    </div>
+    
+    <!--3.컨텐츠영역-->
+    <div class="cont">
+        <section id="cont" class="inbox clb">
+            <h2 class="bld">공지/인포/월간스케줄러</h2>
+            <div class="col-6 c1"></div>
+            <div class="col-6 c1"></div>
+            <div class="col-12 c2"></div>
+
+        </section>
+    </div>
+      
+    <!--4.하단영역-->
+    <div class="info">
+        <footer id="info" class="inbox clb">
+            <h2 class="bld">계열사정보/회사정보</h2>
+            <div class="col-12 i1"></div>
+            <div class="col-6 i2"></div>
+            <div class="col-6 i2"></div>
+        </footer>
+    </div>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!--    <ul class="grid">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>-->
+</body>
+</html>

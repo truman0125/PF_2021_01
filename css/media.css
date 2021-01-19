@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* 1차 포트폴리오 미디어쿼리 - media.css */
+
+/*
+    max-width를 사용할 경우 큰 사이즈에서 작은 사이즈 순으로
+    아래쪽으로 내려가면서 코딩해야 한다!
+    (같은 선택자일 경우 덮어 쓰기로 적용되기 때문이다)
+*/
+
+
+/*1200px 이하 사이즈*/
+@media only screen and (max-width:1200px){
+
+    
+}/*1200px 이하 미디어쿼리*/
+
+
+/*1100px 이하 사이즈*/
+@media only screen and (max-width:1100px){
+    
+  
+      
+    
+}/*1100px 이하 미디어쿼리*/
+
+
+/*1024px 이하 사이즈*/
+@media only screen and (max-width:1024px){
+    
+
+   
+}/*1024px 이하 미디어쿼리*/
+
+
+
+
+
+
+
+
+
+
+
+
