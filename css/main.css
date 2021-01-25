@@ -22,6 +22,7 @@ body::before{
     opacity: .7;
  }
 body{
+    position: relative;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1rem;
     color: #fff;
@@ -36,31 +37,6 @@ body{
     /*GNB Line박스의 부모*/
     z-index: 9999;/*가장위!*/
     
-}
-/*GNB 메뉴 100% 라인박스*/
-.gnbline{
-    position: absolute;
-    top: 117px;
-    left: 0;
-    /*나의 부모는? #top*/
-    width: 100%;
-    height: 0px; /*294px;*/
-    background-color: #121416;
-    border-bottom: 3px solid #cd0102;
-    box-shadow: 0 2px 1px #999;
-    /*transition: height .2s linear;*/
-    /*트랜지션:속시이지-.gnb의 트랜지션과 동일!*/
-}
-/*gnbline 중앙에 960px 박스를 가상요소로 넣고 배경넣기*/
-.gnbline::before{
-    content: "";
-    display: block;
-    background: #121416 url(../images/inhouse_kojam_1.jpg) no-repeat;
-    width: 1176px;
-    height: 100%;
-    margin: 0 auto;/*가로중앙*/
-    /*opacity: .7;*/
-    background-position: 45px 30px;
 }
 
 .t1{
@@ -79,7 +55,7 @@ body{
     margin-left: 255px;
 }
 /*글자사이에 | 삽입*/
-.tmenu li + li::before {
+.tmenu li+li::before {
     content: "|";
     margin: 0 8px;
     font-size: 0.5rem;
@@ -124,12 +100,50 @@ body{
 .tmenu button img{
     width: 38px;
     height: 28px;
-    outline: 1px solid #000;
 }
 .top_btn{
     margin-top: -7px;
     margin-left: -5px;
 }
+
+/*GNB 메뉴 100% 라인박스*/
+.gnbline{
+    position: absolute;
+    top: 117px;
+    left: 0;
+    /*나의 부모는? #top*/
+    width: 100%;
+    height: 0px; /*294px;*/
+    background-color: #121416;
+    border-bottom: 3px solid #cd0102;
+    box-shadow: 0 2px 1px #999;
+    /*transition: height .2s linear;*/
+    /*트랜지션:속시이지-.gnb의 트랜지션과 동일!*/
+    overflow: hidden;
+}
+/*gnbline 중앙에 960px 박스를 가상요소로 넣고 배경넣기*/
+.gnbline::before{
+    content: "";
+    display: block;
+    background: #121416 url(../images/inhouse_kojam_1.jpg) no-repeat;
+    width: 1176px;
+    height: 100%;
+    margin: 0 auto;/*가로중앙*/
+    /*opacity: .7;*/
+    background-position: 45px 30px;
+}
+.gnbline::after{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    width: 160px;
+    transform: translateX(-530px);
+    content: "코리아챔버 오케스트라 KOREA";
+    display: block;
+    color: aliceblue;
+    opacity: 1;
+}
+
 
 /********* GNB 메뉴 ************/
 .gnb {
@@ -190,28 +204,7 @@ body{
 .gnb dl:nth-child(6){
     width: 150px;
 }
-/*.gnb에 마우스 오버시 dl의 가상요소로 왼쪽바 만들기*/
-/*.gnb:hover dl::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 5px;
-    width: 1px;
-    height: 100%;
-    background-color: #e8e8e8;
-}*/
 
-/*.gnb에 마우스 오버시 3번째 dl부터 가상요소 왼쪽바 위치변경*/
-/*.gnb:hover dl:nth-child(2) ~ dl::before {
-    left: 4px;
-}*/
-
-/*3번째 dl부터 패딩값 변경*/
-/*
-    틸드(~) 선택자: 선택요소 뒤의 형제들 선택
-    .gnb dl:nth-child(2)~dl
-    해석: 두번째 dl 뒤의 모든 형제 dl을 선택!
-*/
 .gnb dl:nth-child(2) ~ dl {
     padding-left: 19px;
 }
@@ -226,7 +219,7 @@ body{
 }
 
 /*dl에 마우스 오버시 dt의 a의 글자색 빨간색*/
-.gnb dl:hover dt a {
+.gnb dl dt:hover a {
     color: #f00;
 }
 
@@ -286,6 +279,7 @@ body{
      overflow: hidden;
 }
  #slide {
+     position: relative;
      /*사진을 싸고 있는 슬라이드*/
      top: 0;
      left: 0;
@@ -307,15 +301,29 @@ body{
  }
 /*버튼*/
 .indic{
-    margin-top: 28px;
+    margin-top: 27px;
     margin-left: 144px;
-    width: 174px;
-    height: 21px;
+    width: 150px;
+    height: 28px;
+    
     
 }
 /*회색 버튼*/
 .cir_off li{
+    position: relative;
     margin-right: 10px;
+    width: 11px;
+    height: 10px;
+    cursor: pointer;
+}
+.cir_off li img{
+    position: absolute;
+}
+.cir_off li img:last-child{
+    opacity: 0;
+}
+.cir_off li.on img:last-child{
+    opacity: 1;
 }
 .cir_off li:nth-child(2){
     margin-left: 15px;
@@ -324,9 +332,10 @@ body{
 .cir_on{
     margin-left: 32px;
     opacity: 0;
+    
 }
 .cir_on li{
-   margin-top: -15px;
+    margin-top: -6px;
     margin-right: 2px;
 }
 .col-5{
@@ -418,11 +427,11 @@ ol.movtxt{
     opacity: 0;
     
     }
-ol li{
+.movtxt li{
     float: none;
     margin-top: 40px;
 }
-ol li:last-child img{
+.movtxt li:last-child img{
     width: 58px;
     height: 59px;
     margin-top: 40px;
@@ -435,9 +444,59 @@ ol li:last-child img{
 .plist>ul>li:hover .movtxt{
     opacity: 1;
   }
-/**************/
+/*************************/
+/********가로 배너********/
+.wlist{
+    width: 363px;
+    height: 235px;
+}
+.wlist img{
+    width: 100%;
+    height: 100%;
+}
+/*포스터 위치 잡기*/
+.w1{
+    margin-top: -7px;
+    margin-left: -9px;
+}
+.w2{
+    margin-top: -7px;
+    margin-left: 3px;
+}
+.w3{
+    margin-top: -7px;
+    margin-left: 19px;
+}
+.wlist ul li{
+    position: relative;
+}
 
-
+ol.movtxt2{
+    position: absolute;
+    top: 0px;
+    width: 363px;
+    height: 235px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 25px;
+    opacity: 0;
+}
+.movtxt2 li{
+    float: none;
+    margin-top: 25%;
+}
+.movtxt2 li img{
+    width: 58px;
+    height: 59px;
+}
+/*마우스 오버시 .movtxt 올라오기*/
+.wlist>ul>li:hover .movtxt2{
+    opacity: 1;
+  }
+/***************************/
 .b2{
     height: 320px;
 }
@@ -447,14 +506,126 @@ ol li:last-child img{
 /************3.컨텐츠영역**********/
 .c1{
     height: 296px;
+    padding: 0;
 }
+/*공지사항 박스*/
+.notice{
+    font-size: 0.875rem;
+    line-height: 39px;
+    margin-top: 5px;
+}
+.notice ul li{
+   float: none;
+}
+/*공지사항*/
+.notice ul>li:first-child{
+    font-size: 1rem;
+    color: #D8D8D8;
+    font-weight: bold;
+}
+/*더보기*/
+.notice span{
+    margin-left: 70%;
+    border: 1px solid #d8d8d8;
+    font-size: 0.875rem;
+    padding: 2px 9px;
+}
+/*Notice이미지*/
+.notice ol li::before{
+    content: url(../images/ico_main_news02.png);
+    vertical-align: -5px;
+    margin-right: 11px;
+}
+/*인포메이션 박스*/
+.information{
+    margin-left: 12px;
+    margin-top: 15px;
+    width: 570px;
+    height: 228px;
+    /*outline: 1px solid yellow;*/
+}
+h4{
+    width: 534px;
+    height: 16px;
+    padding-left: 35px;
+    /*outline: 1px solid white;*/
+    font-size: 1rem;
+    color: #d8d8d8;
+}
+.continfo{
+    margin-top: 12px;
+    margin-left: 3px;
+    width: 174px;
+    height: 198px;
+    /*outline: 1px solid white;*/
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+.information li:nth-child(2){
+    margin-left: 20px;
+}
+.information li:nth-child(3){
+    margin-left: 24px;
+}
+.info_area{
+    width: 174px;
+    height: 139px;
+}
+.info_area img{
+    padding-top: 25px;
+}
+.txt{
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 29px;
+    color: #828283;
+}
+.txt strong{
+    font-size: 0.875rem;
+}
+
+/***************************/
 .c2{
-    height: 66px
+    height: 146px;
+    padding: 0;
+}
+/*월간 스케줄러*/
+.month{
+    width: 1176px;
+    height: 67px;
+    background-color: #000;
+    font-size: 0.875rem;
+}
+.now_month{
+    width: 176px;
+    height: 66px;
+    background-color: #fff;
+}
+.month ul{
+    display: inline-block;
+}
+.month li{
+    width: 31px;
+    height: 67px;
+    text-align: center;
+}
+.month li a{
+    font-family: arial;
+    color: #9a9a9b;
+}
+.month li p{
+    padding: 0px 0px 3px;
+    margin: 25px 8px 22px;
+}
+.month li:hover{
+    background-color: #cc0000;
+    
 }
 
 /************4.하단영역************/
 .i1{
-    height: 66px
+    height: 166px
 }
 .i2{
     height: 101px;
