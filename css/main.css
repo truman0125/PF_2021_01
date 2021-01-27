@@ -19,7 +19,7 @@ body::before{
     background-repeat: no-repeat;
     background-position: center top;
     z-index: -1;
-    opacity: .7;
+    opacity: 0;
  }
 body{
     position: relative;
@@ -119,9 +119,21 @@ body{
     box-shadow: 0 2px 1px #999;
     /*transition: height .2s linear;*/
     /*트랜지션:속시이지-.gnb의 트랜지션과 동일!*/
+    z-index: 1;
     overflow: hidden;
 }
 /*gnbline 중앙에 960px 박스를 가상요소로 넣고 배경넣기*/
+.gnbline::after{
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    width: 180px;
+    transform: translateX(-540px);
+    content: "인 하우스 아티스트 시리즈 I. KCO (21.03.11)";
+    display: block;
+    color: aliceblue;
+    opacity: ;
+}
 .gnbline::before{
     content: "";
     display: block;
@@ -129,19 +141,7 @@ body{
     width: 1176px;
     height: 100%;
     margin: 0 auto;/*가로중앙*/
-    /*opacity: .7;*/
     background-position: 45px 30px;
-}
-.gnbline::after{
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    width: 160px;
-    transform: translateX(-530px);
-    content: "코리아챔버 오케스트라 KOREA";
-    display: block;
-    color: aliceblue;
-    opacity: 1;
 }
 
 
@@ -172,6 +172,7 @@ body{
 .gnb:hover{
     height: 345px;
 }
+
 
 
 /*각 dl박스*/
@@ -611,7 +612,7 @@ h4{
     height: 66px;
     float: left;
     font-size: 1rem;
-    outline: 3px solid white;
+    /*outline: 3px solid white;*/
 }
 .now_month p{
     margin-top: 20px;
@@ -626,7 +627,7 @@ h4{
     height: 67px;
     margin-left: 10px;
     display: inline-block;
-    outline: 2px solid yellow;
+    /*outline: 2px solid yellow;*/
 }
 
 .month li{
@@ -636,7 +637,7 @@ h4{
 }
 .month li a{
     font-family: arial;
-    color: #9a9a9b;
+    color: #e6e6e6;
 }
 .month li p{
     padding: 0px 0px 3px;
@@ -646,14 +647,78 @@ h4{
 .month li:hover{
     background-color: #cc0000;
 }
-.month li a:hover{
+.month li>a:hover{
     color: white;
 }
 
 /************4.하단영역************/
 .i1{
-    height: 166px
+    height: 166px;
+    padding: 0;
 }
+.com_ban{
+    position: relative;
+    width: 1176px;
+    height: 67px;
+    overflow: hidden;
+    outline: 3px dashed yellow;
+}
+/*배너이동버튼*/
+.abtn{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    /*세로중앙이동*/
+    width: 25px;
+    height: 24px;
+    z-index: 2;/*배너리스트보다 위에 옴!*/
+    /*outline: 2px solid red;*/
+    
+}
+/*왼쪽이동버튼*/
+.lb{
+    left: 10px;
+    background: url(../images/btn_m_cal_left.gif) no-repeat;
+}
+/*오른쪽이동버튼*/
+.rb{
+    right: -10px;
+     background: url(../images/btn_m_cal_right.gif) no-repeat;
+}
+.com_box{
+    width: 1088px;
+    /*height: 67px;*/
+    margin: 0 44px;
+    padding: 18px 0;
+    overflow: hidden;
+}
+
+/*계열사 로고 박스*/
+ #slide2 {
+     /*position: relative;*/
+     /*사진을 싸고 있는 슬라이드*/
+     top: 0;
+     left: 0;
+     /*모든 슬라이드 5장이 옆으로 나열되도록 
+            width 크기를 확보해야한다!!!*/
+     width: 500%;
+     /*5배크기*/
+     /*height: 100%;*/
+ }
+ #slide2 li{
+     /*부모가 5배되었으므로 5등분함!*/
+    /* width: 20%;
+     height: 100%;*/
+ }
+ #slide2 li img {
+     width: 100px;
+     height: 31px;
+     padding: 0 23px;
+     
+     /*이미지는 박스에 맞춤!*/
+  /*   width: 100%;
+     height: 100%*/;
+ }
 /**********************************/
 .i21{
     height: 101px;
@@ -683,12 +748,59 @@ h4{
     width: 54%;
     padding: 0;
 }
-.col-6_info_logo{
-    
+.footer_info{
+    width: 630px;
+    height: 90px;
+    /*outline: 2px solid yellow;*/
+    padding-left: 10px;
+}
+.footer_info li{
+    margin-top: 16px;
+    margin-right: 26px;
 }
 
-
-
+.footer_info a{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #b0b0b1;
+    font-size: 0.75rem;
+    
+}
+.footer_info li:nth-child(2) a{
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: bold;
+}
+.footer_info li:nth-child(5){
+    margin-right: 18px;
+}
+.footer_info img{
+    width: 53px;
+    height: 25px;
+    margin-right: -11px;
+    margin-top: -7px;
+}
+#fslink{
+    margin-left: 62.5%;
+    width: 218px;
+    height: 29px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 0.75rem;
+    color: #b0b0b2;
+    /*border: 1px solid #6a6a6a;*/
+    padding-left: 8px;
+    transform: translate(2px, -2px);
+    background: url(../images/bg_footer2_link_m.gif) no-repeat;
+    /*background-position: 10px 10px;*/
+    background-color: #000;
+    outline: none;
+    border: none;
+    margin-top: 12px;
+    
+}
+/*기존 화살표 보이지 않게*/
+select{
+    appearance: none;
+}
 
 
 
