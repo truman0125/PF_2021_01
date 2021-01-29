@@ -91,6 +91,7 @@ body{
 /*SNS아이콘*/
 .tmenu button{
     margin-left: -5px;
+    border: none;
 }
 .tmenu button a{
     display: block;
@@ -244,26 +245,6 @@ body{
     text-decoration: underline;
 }
 
-/*하위메뉴에 마우스 오버시 가상요소로 빨간공 아이콘 만들기*/
-/*.gnb dd:hover a::before {
-    content: "＞";
-    display: block;
-    position: absolute;
-    
-    margin-top: 5px;
-    margin-left: -20px;
-
-    width: 11px;
-    height: 11px;
-    background-color: #f00;
-    border-radius: 50%;
-    color: #fff;
-    font: bold 9px/11px arial;
-    text-align: center;
-
-}*/
-
-
 
 /************2.배너영역************/
 .b1{
@@ -330,8 +311,8 @@ body{
     margin-left: 15px;
 }
 .cir_off li img:last-child{
-    top: -3px;
-    left: -3px;
+    top: -3.2px;
+    left: -3.4px;
 }
 .cir_off li:first-child img:last-child{
     top: 2px;
@@ -445,6 +426,7 @@ ol.movtxt{
     height: 59px;
     margin-top: 40px;
 }
+
 /*6번째 스몰배너 view이미지 위치 조정*/
 .view{
     margin-top: 60px;
@@ -525,6 +507,9 @@ ol.movtxt2{
 }
 .notice ul li{
    float: none;
+}
+.notice li a{
+   color: #fff;
 }
 /*공지사항*/
 .notice ul>li:first-child{
@@ -661,7 +646,7 @@ h4{
     width: 1176px;
     height: 67px;
     overflow: hidden;
-    outline: 3px dashed yellow;
+    /*outline: 3px dashed yellow;*/
 }
 /*배너이동버튼*/
 .abtn{
@@ -711,7 +696,7 @@ h4{
      height: 100%;*/
  }
  #slide2 li img {
-     width: 100px;
+     width: 110px;
      height: 31px;
      padding: 0 23px;
      
