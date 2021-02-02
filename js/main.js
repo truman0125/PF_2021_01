@@ -1,7 +1,19 @@
 //// 롯데콘서트홀 JS - main.js /////
 
+var mob = 0;
+if($(window).width()<500) mob=1;
+console.log("모바일:"+mob);
+
+
 ///// 로드구역 //////////////////////////////
     $(function(){
+        
+        if(mob){
+            //mobile code
+        }
+        else{
+            //DT
+        }
         
         var sld = $("#slide");
         var sldCnt = sld.find("li").length;
@@ -197,37 +209,14 @@
     // 변경내용: 새창열고 사이트 이동하기
     // 선택박스의 선택을 변경할때 발생하는 이벤트
     //////////////////////////////////////////////
-    $("#fslink").change(function(){
-        
-        // 선택한 option의 value값 읽어오기
-        // val() - 선택값의 읽어오는 메서드
-        let opt = $(this).val();
-        console.log("선택값:"+opt);
-        
-        // 선택값이 "fs"가 아니면 새창 띄우기
-        if(opt==="fs") return false;
-        
-        // 이동 url변수
-        let url;
-        // 경우 나누기
-        switch(opt){
-            case "cal": 
-                url="http://www.icpk.co.kr/";break;
-            case "rose":                 url="http://www.irosehill.co.kr/";break;
-        }///// switch case ///////////
-        
-        // 새창열기 페이지 이동
-        window.open().location.href = url;
-        
-    });/////// change /////////////////        
+    
         
         
-        
-        
-        
-        
-        
-        
+        $("#fslink").change(function(){
+            let url = $(this).val();
+            console.log(url);
+            window.open().location.href = url;
+        });
         
         
         

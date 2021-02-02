@@ -48,6 +48,40 @@ body{
        margin-top: 21px;
        margin-left: -10px;
 }
+.logo img{
+    max-width: 100%;
+}
+
+/*햄버거 버튼*/
+#ham{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    
+    background-color: transparent;
+    border: none;
+    display: none;/*처음에 안보임*/
+}
+#ham img{
+    width: 25px;
+    height: 21px;
+    padding: 15px;
+}
+/*공연전체보기 버튼*/
+#magni{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: 0;
+    display: none;/*처음에 안보임*/
+}
+#magni img{
+    width: 39px;
+    height: 32px;
+    padding: 15px 14px 17px;
+}
+
 /*티베뉴*/
 .tmenu{
     width: 725px;
@@ -765,7 +799,7 @@ h4{
     margin-top: -7px;
 }
 #fslink{
-    margin-left: 62.5%;
+    margin-left: 182.5%;
     width: 218px;
     height: 29px;
     font-family: 'Nanum Gothic', sans-serif;
@@ -779,8 +813,11 @@ h4{
     background-color: #000;
     outline: none;
     border: none;
-    margin-top: 12px;
+    margin-top: 10px;
     
+}
+#fslink strong{
+    border-bottom: 1px solid red;
 }
 /*기존 화살표 보이지 않게*/
 select{
