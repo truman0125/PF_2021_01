@@ -26,6 +26,7 @@
     /*2.모바일 사이즈 가로스크롤 없애기*/
     html,body{
         width: 100%;
+        background-color: #212121;
         overflow-x: hidden;
     }
     
@@ -33,6 +34,7 @@
     .t1{
         height: 65px;
         padding: 0;
+        background-color: #000;
       }
     #logo{
         position: absolute;
@@ -62,24 +64,6 @@
     #big_ban{
         width: 100%;
     }
-    /*스몰 배너 박스 사이즈 변경*/
-    #small_ban{
-        width: 100%;
-    }
-    /*스몰배너 포스터 사이즈 변경*/
-     .plist img{
-        width: 105px;
-        height: 140px;
-    }
-    /*설명박스*/
-    ol.movtxt{
-        width: 105px;
-        height: 140px;
-    }
-    
-    .pli1 ul>li,.pli2 ul>li{
-        margin-top: 0;
-    }
     
     /*가로배너 없애기*/
     .col-4{
@@ -88,78 +72,239 @@
     
     
     
+/******************스몰배너**************************/
+/*스몰 배너 박스 사이즈 변경*/
+#small_ban{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.b1{
+    height: 100%;        
+}
+
+/*공연전체보기 버튼*/
+.all{
+    display: none;
+}
+/*포스터 메뉴*/
+.pli1{
+    margin-top: 0px;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+.pli2{
+    margin-top: 0px;
+    outline: 2px solid lime;
+}
+.plist{
+    width: 100%;
+    height: 147px;
+    padding: 0 0px;
+    margin: 0 0 15px;
+    overflow: hidden;
+}
+.plist ul > li{
+    float: left;
+    padding: 0 0px;
+    cursor: pointer;
+}
+.pli1 ul>li:nth-child(1){
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.pli1 ul>li:nth-child(2){
+    /*margin-left: 0px;*/
+    margin: 0 15px;
+}
+.pli1 ul>li:nth-child(3){
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.pli2 ul>li:nth-child(1){
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.pli2 ul>li:nth-child(2){
+    /*margin-left: 0px;*/
+    margin: 0 15px;
+}
+.pli2 ul>li:nth-child(3){
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.plist>ul{
+    width: 345px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.plist ul li{
+    position: relative;
+}
+/*포스터 이미지 크기*/
+.plist img{
+    width: 105px;
+    height: 140px;
+    /*opacity: .95;*/
+}
+/*포스터에 오버되는 박스*/
+ol.movtxt{
+   display: none;
+}
+.movtxt li{
+    display: none;
+}
+.movtxt li:last-child img{
+    display: none;
+}
+/*6번째 스몰배너 view이미지 위치 조정*/
+.view{
+    margin-top: 0px;
+}
+/*마우스 오버시 .movtxt 올라오기*/
+.plist>ul>li:hover .movtxt{
+    opacity: 0;
+  }
+
+/**************공지사항********************/    
+.c1{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+/*공지사항 박스*/
+.notice{
+   display: none;
+}
+.notice_m{
+    display: block;
+}
+/*********인포메이션***************/
+/*인포메이션 박스*/
+.information{
+    width: 384px;
+    height: 135px;
+    margin: 5px 15px 0;
+    padding: 0;
+}
+h4{
+    display: none;
+}
+.continfo{
+    width: 128px;
+    height: 135px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.information li:nth-child(2){
+    margin-left: 0px;
+}
+.information li:nth-child(3){
+    margin-left: 0px;
+}
+.info_area{
+    display: none;
+}
+.info_area2{
+    display: block;
+}
+.info_area img{
+    display: none;
+}
+.txt{
+    display: none;
+}
+/*******sns big 아이콘**********/
+.c2{
+    height: 100%;        
+}
+.month{
+    display: none;        
+}
+.sns_big{
+    display: block;    
+}
+/**********계열사 로고 박스***************/
+.i1{
+    height: 138px;
+    padding: 0;
+}
+.com_ban{
+    position: relative;
+    width: 414px;
+    height: 138px;
+    /*margin: 46px 0;*/
+    
+    overflow: hidden;
+    /*outline: 3px dashed yellow;*/
+}
+/*배너이동버튼*/
+.abtn{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    /*세로중앙이동*/
+    width: 25px;
+    height: 24px;
+    z-index: 2;/*배너리스트보다 위에 옴!*/
+    /*outline: 2px solid red;*/
+    
+}
+/*왼쪽이동버튼 숨기기*/
+.lb{
+    display: none;
+}
+/*오른쪽이동버튼 숨기기*/
+.rb{
+    display: none;
+}
+.com_box{
+    width: 633px;
+    height: 46px;
+    margin: 0 23px;
+    padding: 46px 0;
+    overflow: hidden;
+}
+
+/*계열사 로고 박스*/
+ #slide2 {
+     top: 0;
+     left: 0;
+     width: 500%;
+ }
+ #slide2 li{
+     /*부모가 5배되었으므로 5등분함!*/
+    /* width: 20%;
+     height: 100%;*/
+ }
+ #slide2 li img {
+     width: 165px;
+     height: 46px;
+     padding: 0 23px;
+}
+#slide2 li:nth-child(2) img{
+    width: 140px;        
+}
+
+i21{
+    width: 100%;
+    height: 176px;
+}
+.i22{
+    width: 0;
+    display: none;
+}
     
     
-  
     
     
-    /*5. 컨텐츠 영역의 col-로 된 파티션 class의 width값을 100%로 변경*/
-    .cont [class*="col-"]{
-        width: 100%;
-        padding: 0;
-    }
     
-    /*6. 컨텐츠 영역의 비율유지 설정을 없앤다*/
-    .rbx2::before{
-        display: none;
-    }
     
-    /*7. 컨텐츠 영역의 비율유지 속박스의 position을 static처리*/
-    .cont .ibx{
-        position: static;
-    }
-    
-    /*8. 메뉴배너의 li 가로크기를 100%로 변경, 높이값 설정*/
-    #mban li, #mban li:last-child{
-        width: 100%;
-        height: 260px;
-        padding: 0;
-    }
-    
-    /*9. 배너 비율변경하기*/
-    .rbx::before{
-        padding-top: 58%;
-    }
-    
-    /*10. 전체 배경색 검정*/
-  /*  body{
-        background-color: #000;
-    }*/
-    
-    /*11. 상단영역 배경 흰색*/
-    .top{
-        background-color: #000;    
-    }
-    
-    /*12. 패딩없애기*/
-    #news li:first-child,
-    #news li:last-child{
-        padding: 0;
-    }
-    
-  
-    /*14 뉴스글자조정*/
-    .atit{
-        height: 5.4rem;
-        line-height: 2rem;
-        padding: 21px;
-    }
-    
-    /*15. 하단 배경로고*/
-    #info{
-        height: 220px;
-        background-position: center 37px;
-        background-size: 240px;
-        overflow: hidden;
-    }
-    
-    /*16. 하단주소*/
-    #info address{
-        bottom: 13px;
-        padding: 22px;
-        box-sizing: border-box;
-    }
-   
 }/*500px 이하 미디어쿼리*/
 
 

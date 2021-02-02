@@ -564,6 +564,57 @@ ol.movtxt2{
     vertical-align: -5px;
     margin-right: 11px;
 }
+/*********공지사항 모바일용**********/
+/*공지사항 전체 박스*/
+.notice_m{
+    margin: 25px 15px 0;
+    background-color: #000;
+}
+/*공지사항 한줄 박스*/
+.ntic_m0{
+    width: 384px;
+    height: 90px;
+}
+/*공지사항 노틱 이미지*/
+.ntic_m1{
+    width: 85px;
+    height: 70px;
+    padding: 20px 0 0;
+    float: left;
+}
+.ntic_m1 img{
+    width: 55px;
+    height: 55px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+/*공지사항 텍스트*/
+.ntic_m2{
+    width: 219px;
+    height: 54px;
+    padding: 20px 0 0 10px;
+    font-size: 0.875rem;
+}
+.ntic_m2 a{
+    color: #fff;
+}
+/*공지사항 플러스 이미지*/
+.ntic_m3{
+    width: 70px;
+    height: 70px;
+    padding: 20px 0 0;
+}
+.ntic_m3 img{
+    width: 40px;
+    height: 40px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+/*************************************************/
 /*인포메이션 박스*/
 .information{
     margin-left: 12px;
@@ -603,6 +654,17 @@ h4{
 .info_area img{
     padding-top: 25px;
 }
+.info_area2{
+    width: 105px;
+    height: 135px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.info_area2 img{
+    width: 100%;
+    height: 100%;
+}
+
 .txt{
     display: block;
     font-size: 0.75rem;
@@ -618,20 +680,20 @@ h4{
     height: 146px;
     padding: 0;
 }
-/*월간 스케줄러*/
+/*************월간 스케줄러**************/
 .month{
     width: 1176px;
     height: 67px;
-    background-color: #000;
     font-size: 0.875rem;
-    opacity: .5;
+    border: 1px solid #3c3c3c;
 }
 .now_month{
     width: 176px;
     height: 66px;
     float: left;
     font-size: 1rem;
-    /*outline: 3px solid white;*/
+    color: #d8d8d8;
+    font-weight: 700;
 }
 .now_month p{
     margin-top: 20px;
@@ -646,28 +708,46 @@ h4{
     height: 67px;
     margin-left: 10px;
     display: inline-block;
-    /*outline: 2px solid yellow;*/
 }
 
-.month li{
+.date li{
     width: 31px;
     height: 67px;
     text-align: center;
 }
-.month li a{
+.date li a{
     font-family: arial;
-    color: #e6e6e6;
+    color: #9a9a9b;
+    outline: 1px solid yellow;
 }
-.month li p{
+.date li p{
     padding: 0px 0px 3px;
     margin: 25px 8px 22px;
 }
+.date li:hover a{
+    color: #f8f8f8;
+}
 /*날짜에 마우스 오버시 색상 변화*/
-.month li:hover{
+.date li:hover{
     background-color: #cc0000;
 }
-.month li>a:hover{
-    color: white;
+/***********SNS 아이콘*********************/
+.sns_big{
+    width: 384px;
+    height: 94px;
+    margin: 0 15px;
+    /*outline: 2px solid yellow;*/
+}
+.sns_big li{
+    width: 96px;
+    height: 93px;
+}
+.sns_big li:nth-child(2){
+    background-color: #1c1c1c;
+}
+.sns_big img{
+    width: 100%;
+    height: 100%;
 }
 
 /************4.하단영역************/
