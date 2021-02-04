@@ -13,7 +13,7 @@ font-family: 'Nanum Gothic', sans-serif;
     /*1176px보다 작아지면 최대 100%유지*/
     margin: 0 auto;
     /*가로중앙정렬*/
-    outline: 2px dashed blue;
+    /*outline: 2px dashed blue;*/
 }
 /*비율유지박스*/
 .rbx{

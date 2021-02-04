@@ -150,8 +150,8 @@ body{
     width: 100%;
     height: 0px; /*294px;*/
     background-color: #121416;
-    border-bottom: 3px solid #cd0102;
-    box-shadow: 0 2px 1px #999;
+    /*border-bottom: 3px solid #cd0102;*/
+    /*box-shadow: 0 2px 1px #999;*/
     /*transition: height .2s linear;*/
     /*트랜지션:속시이지-.gnb의 트랜지션과 동일!*/
     z-index: 1;
@@ -569,6 +569,7 @@ ol.movtxt2{
 .notice_m{
     margin: 25px 15px 0;
     background-color: #000;
+    display: none;
 }
 /*공지사항 한줄 박스*/
 .ntic_m0{
@@ -654,11 +655,13 @@ h4{
 .info_area img{
     padding-top: 25px;
 }
+/*인포메이션 영역 모바일 버전*/
 .info_area2{
     width: 105px;
     height: 135px;
     margin-left: 50%;
     transform: translateX(-50%);
+    display: none;
 }
 .info_area2 img{
     width: 100%;
@@ -736,6 +739,7 @@ h4{
     width: 384px;
     height: 94px;
     margin: 0 15px;
+    display: none;
     /*outline: 2px solid yellow;*/
 }
 .sns_big li{
@@ -794,6 +798,7 @@ h4{
 
 /*계열사 로고 박스*/
  #slide2 {
+     
      /*position: relative;*/
      /*사진을 싸고 있는 슬라이드*/
      top: 0;
@@ -823,6 +828,8 @@ h4{
     height: 101px;
     width: 46%;
     padding: 0;
+    border-top: 1px solid #252629;
+    position: relative;
 }
 .footer_logo{
     margin-top: 12px;
@@ -841,11 +848,47 @@ h4{
     color: #828283;
     /*outline: 2px solid yellow;*/
 }
+.addr span{
+    font-weight: bold;
+}
+.footer_side{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 176px;
+    text-align: center;
+    line-height: 103px;
+    border-left: 1px solid #252629;
+    display: none;
+}
+.footer_side img{
+    width: 22px;
+    height: 29px;
+}
+.btn_eng{
+    position: absolute;
+    top: 55px;
+    right: 70px;
+    display: none;
+}
+.btn_eng a{
+    display: inline-block;
+    padding: 3px 5px;
+    border: 1px solid #a49172;
+    border-radius: 18px;
+    color: #a49172;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
 
+/************************************/
 .i22{
     height: 101px;
     width: 54%;
     padding: 0;
+    position: relative;
 }
 .footer_info{
     width: 630px;
@@ -878,6 +921,36 @@ h4{
     margin-right: -11px;
     margin-top: -7px;
 }
+/******하단 인포 모바일******/
+.footer_info_m{
+    width: 221px;
+    height: 64px;
+    display: none;
+}
+
+.footer_info_m li{
+    /*float: none;*/
+}
+
+.footer_info_m li a{
+    font-family: 'Dotum', '돋움', sans-serif;
+    color: #76787E;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.footer_info_m li strong{
+    color: #fff;
+    font-size: 0.8125rem;    
+}
+
+.footer_info_m li p{
+    color: #76787E;
+    font-size: 0.625rem;
+    margin: 0 5px;
+    line-height: 19px;
+}
+
+/*계열사 바로가기 박스*/
 #fslink{
     margin-left: 182.5%;
     width: 218px;
@@ -903,7 +976,31 @@ h4{
 select{
     appearance: none;
 }
-
+/*최하단 배너 모바일용*/
+.footer_ban{
+    position: relative;
+    width: 414px;
+    height: 105px;
+    display: none;
+}
+.footer_ban img{
+    width: 100%;
+    height: 100%;
+}
+.quick{
+    position: fixed;
+    bottom: 27px;
+    left: 17px;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    display: none;
+}
+.quick img{
+    width: 100%;
+    height: 100%;
+}
 
 
 
