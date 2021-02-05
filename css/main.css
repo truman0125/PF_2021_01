@@ -424,7 +424,7 @@ body{
 .cir_off2 li img:last-child{
     opacity: 0;
 }
-.cir_off2 li img:last-child{
+.cir_off2 li.on img:last-child{
     opacity: 1;
 }
 .cir_off2 li:nth-child(2){
@@ -486,7 +486,6 @@ body{
     padding-right: 0;
 }
 .plist ul{
-    
     margin: 0;
     padding: 0;
     list-style: none;
