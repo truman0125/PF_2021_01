@@ -59,16 +59,35 @@
     /* 메뉴(nav,gnb)박스 사이즈 변경*/
     #t1n{
         width: 100%;
-    }        
-    /*빅 배너 박스 사이즈 변경*/
-    #big_ban{
-        width: 414px;
-        height: 378px;
-        outline: 2px solid yellow;
     }
-    .big_ban,.gnbline{
-        display: none;
-    }
+/*****************************************************/
+/*빅 배너 박스 사이즈 변경*/
+ .col-5 {
+    padding: 30px 0;
+    width: 100%;
+}
+#slide,.gnbline,.indic{
+    display: none;
+}
+.big_ban{
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 444px;
+    height: 281px;
+    /*background-color: aqua;*/
+    /*opacity: .3;*/
+     /*overflow: hidden;*/
+}
+/*버튼*/
+.indic2{
+    margin: 0px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding-top: 15px;
+    bottom: 10px;
+    width: 120px;
+    height: 21px;
+}
 /******************스몰배너**************************/
 /*스몰 배너 박스 사이즈 변경*/
 #small_ban{

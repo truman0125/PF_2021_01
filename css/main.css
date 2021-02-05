@@ -279,10 +279,12 @@ body{
     text-decoration: underline;
 }
 
-
 /************2.배너영역************/
 .b1{
     height: 753px;
+}
+.col-5{
+    width: 38.66%;
 }
 /*메인 빅 배너*/
 .big_ban{
@@ -321,8 +323,6 @@ body{
     margin-left: 144px;
     width: 150px;
     height: 28px;
-    
-    
 }
 /*회색 버튼*/
 .cir_off li{
@@ -352,20 +352,94 @@ body{
     top: 2px;
     left: 0px;
 }
-/*빨간버튼*/
-/*.cir_on{
-    margin-left: 32px;
+/******* 빅배너 모바일 *******/
+.ban_box{
+    position: relative;
+    width: 202px;
+    height: 281px;
+    margin: 0 105px;
+    perspective: 370px;
+}
+.ban_box img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease-in-out;
+}
+/*개별이미지 설정*/
+/*(1)왼쪽끝*/
+.ban_box img:nth-child(1){
+    top: 0;
+    left: -240%;
+    opacity: 1;
+}
+/*(2)왼쪽옆*/
+.ban_box img:nth-child(2){
+    top: 0;
+    left: -120%;
+    opacity: 1;
+    transform: rotateY(14deg);
+    transform-origin: left;
+}
+/*(3)중앙*/
+.ban_box img:nth-child(3){
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+/*(4)오른쪽옆*/
+.ban_box img:nth-child(4){
+    top: 0;
+    left: 120%;
+    transform: rotateY(-14deg);
+    transform-origin: right;
+    opacity: 1;
+}
+/*(5)오른쪽끝*/
+.ban_box img:nth-child(5){
+    top: 0;
+    left: 240%;
+    opacity: 1;
+}
+/*모바일 블릿버튼*/
+.indic2{
+    margin-top: 34px;
+    margin-left: 144px;
+    width: 120px;
+    height: 28px;
+}
+.cir_off2 li{
+    position: relative;
+    margin-right: 10px;
+    width: 11px;
+    height: 10px;
+    cursor: pointer;
+}
+.cir_off2 li img{
+    position: absolute;
+    width: 8px;
+    height: 9px;
+}
+.cir_off2 li img:last-child{
     opacity: 0;
-    
 }
-.cir_on li{
-    margin-top: -4px;
-    margin-right: 0px;
-}*/
-.col-5{
-    width: 38.66%;
-    
+.cir_off2 li img:last-child{
+    opacity: 1;
 }
+.cir_off2 li:nth-child(2){
+    margin-left: 15px;
+}
+.cir_off2 li img:last-child{
+    top: -3.2px;
+    left: -3.4px;
+}
+.cir_off2 li:first-child img:last-child{
+    top: 2px;
+    left: 0px;
+}
+        
+/****************************************/
 /*******스몰배너*******/
 .all{
     margin-left: 511px;
