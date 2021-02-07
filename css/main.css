@@ -194,7 +194,7 @@ body{
     /*transition: height .2s linear;*/
     /*트랜지션:속시이지*/
     line-height: 35px;
-    background-color: #121416;
+    /*background-color: #121416;*/
     /*outline: 5px dotted blue;*/
 }
 .gnb ul{
@@ -206,6 +206,7 @@ body{
 /*.gnb에 마우스 오버시 높이값 변경하여 하위메뉴 보이기*/
 .gnb:hover{
     height: 345px;
+    /*background-color: #121416;*/
 }
 
 
@@ -761,7 +762,7 @@ h4{
     width: 1176px;
     height: 67px;
     font-size: 0.875rem;
-    border: 1px solid #3c3c3c;
+    /*border-top: 1px solid #262626;*/
 }
 .now_month{
     width: 176px;
